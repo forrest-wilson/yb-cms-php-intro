@@ -1,6 +1,5 @@
 <?php
     // for ($i = 0; $i < 12; $i++) {
-    //     $array = [];
     //     for ($j = 0; $j < 4; $j++) {
     //         $rand = mt_rand(1, 100);
     //         echo "$i, $rand <br>";

@@ -26,10 +26,10 @@
         $i++;
 
         if ($i == 5) {
-            break;
+            break; // Breaks the while loop
             echo "This won't print";
         } else {
-            continue;
+            continue; // Continues to keep the loop running
             echo "This sentance will not be printed";
         }
     }

@@ -6,7 +6,7 @@
     $leapYear = date("L");
     $year = date("Y");
 
-    if ($currentHour > 17) {
+    if ($currentHour >= 17) {
         echo("Good evening $name.");
     } elseif ($currentHour >= 12 && $currentHour < 16) { 
         echo("Good afternoon $name.");

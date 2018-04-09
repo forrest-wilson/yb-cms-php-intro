@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Radio Buttons</title>
+</head>
+<body>
+    <form action="radio-buttons.php" method="POST">
+        Username: <input type="text" name="username">
+
+        <br>
+
+        Place: Auckland <input type="checkbox" name="place[]" value="Auckland">
+        Wellington <input type="checkbox" name="place[]" value="Wellington">
+
+        <br>
+
+        Result: Pass <input type="radio" name="result" value="Pass">
+        Fail <input type="radio" name="result" value="Fail">
+
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

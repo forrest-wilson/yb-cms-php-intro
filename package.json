@@ -1,0 +1,23 @@
+{
+  "name": "yb-cms-php-intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forrest-wilson/yb-cms-php-intro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/forrest-wilson/yb-cms-php-intro/issues"
+  },
+  "homepage": "https://github.com/forrest-wilson/yb-cms-php-intro#readme",
+  "dependencies": {
+    "bulma": "^0.6.2",
+    "jquery": "^3.3.1"
+  }
+}

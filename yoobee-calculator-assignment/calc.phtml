@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yoobee Calculator</title>
+
+    <link rel="stylesheet" href="../node_modules/bulma/css/bulma.css">
+    <style>
+        .inner {
+            padding: 20px 10px;
+        }
+
+        .form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="content inner">
+        <h1>Yoobee Calculator</h1>
+        <div>
+            <?php include("displayDate.php"); ?>
+            <p>Please choose the shape for which you want to calculate the properties</p>
+            <button id="showCircleForm" class="button is-primary">Circle</button>
+            <button id="showSquareForm" class="button is-primary">Square</button>
+            <button id="showRectangleForm" class="button is-primary">Rectangle</button>
+        </div>
+        <div>
+            <form id="circleForm" class="form" action="calc.phtml" method="POST">
+                <div class="field">
+                    <label class="label">Enter Radius</label>
+                    <div class="control">
+                        <input class="input" name="radius" type="text" placeholder="Radius">
+                    </div>
+                </div>
+                <input type="hidden" name="action" value="circle">
+                <input type="submit" class="button is-success">
+            </form>
+
+            <form id="squareForm" class="form" action="calc.phtml" method="POST">
+                <div class="field">
+                    <label class="label">Enter Side Length</label>
+                    <div class="control">
+                        <input class="input" name="side" type="text" placeholder="Side Length">
+                    </div>
+                </div>
+                <input type="hidden" name="action" value="square">
+                <input type="submit" class="button is-success">
+            </form>
+
+            <form id="rectangleForm" class="form" action="calc.phtml" method="POST">
+                <div class="field">
+                    <label class="label">Enter Width</label>
+                    <div class="control">
+                        <input class="input" name="width" type="text" placeholder="Width">
+                    </div>
+                    <br>
+                    <label class="label">Enter Height</label>
+                    <div class="control">
+                        <input class="input" name="height" type="text" placeholder="Height">
+                    </div>
+                </div>
+                <input type="hidden" name="action" value="rectangle">
+                <input type="submit" class="button is-success">
+            </form>
+            <div>
+                <?php include("calculate.php"); ?>
+            </div>
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./calc.js"></script>
+</body>
+</html>

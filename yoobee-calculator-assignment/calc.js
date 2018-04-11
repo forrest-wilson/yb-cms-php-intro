@@ -1,22 +1,13 @@
 $(document).ready(function() {
-    $("#showCircleForm").on("click", function(e) {
+    $("#circleForm").show();
+    
+    $(".form-selector").on("click", function(e) {
         e.preventDefault();
 
         $(".form").hide();
-        $("#circleForm").show();
-    });
+        $(".form-selector").removeClass("is-active");
 
-    $("#showSquareForm").on("click", function(e) {
-        e.preventDefault();
-
-        $(".form").hide();
-        $("#squareForm").show();
-    });
-
-    $("#showRectangleForm").on("click", function(e) {
-        e.preventDefault();
-
-        $(".form").hide();
-        $("#rectangleForm").show();
+        $("#" + $(this).data("form")).show();
+        $(this).addClass("is-active");
     });
 });

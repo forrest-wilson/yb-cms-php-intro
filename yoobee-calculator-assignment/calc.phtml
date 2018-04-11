@@ -18,14 +18,32 @@
     </style>
 </head>
 <body>
-    <div class="content inner">
-        <h1>Yoobee Calculator</h1>
-        <div>
-            <?php include("displayDate.php"); ?>
-            <p>Please choose the shape for which you want to calculate the properties</p>
-            <button id="showCircleForm" class="button is-primary">Circle</button>
-            <button id="showSquareForm" class="button is-primary">Square</button>
-            <button id="showRectangleForm" class="button is-primary">Rectangle</button>
+    <div class="container inner">
+        <div class="content">
+            <h1>Yoobee Calculator</h1>
+            <div>
+                <?php include("displayDate.php"); ?>
+                <p>Please choose the shape for which you want to calculate the properties</p>
+            </div>
+        </div>
+        <div class="tabs is-boxed">
+            <ul>
+                <li id="showCircleForm" class="form-selector is-active" data-form="circleForm">
+                    <a>
+                        <span>Circle</span>
+                    </a>
+                </li>
+                <li id="showSquareForm" class="form-selector" data-form="squareForm">
+                    <a>
+                        <span>Square</span>
+                    </a>
+                </li>
+                <li id="showRectangleForm" class="form-selector" data-form="rectangleForm">
+                    <a>
+                        <span>Rectangle</span>
+                    </a>
+                </li>
+            </ul>
         </div>
         <div>
             <form id="circleForm" class="form" action="calc.phtml" method="POST">

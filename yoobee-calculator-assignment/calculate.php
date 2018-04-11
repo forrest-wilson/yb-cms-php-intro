@@ -5,10 +5,13 @@
         $area = 3.14 * $rad * $rad;
         $circum = 2 * 3.14 * $rad;
 
+        echo "<br>";
         echo "<p>Radius: $rad</p>";
         echo "<p>Diameter: $diam</p>";
         echo "<p>Area: $area</p>";
         echo "<p>Circumference: $circum</p>";
+        echo "<br>";
+        echo "<div class='circle'></div>";
     }
 
     function calculateSquare() {
@@ -16,9 +19,12 @@
         $area = $side * $side;
         $perim = $side * 4;
 
+        echo "<br>";
         echo "<p>Side Length: $side</p>";
         echo "<p>Area: $area</p>";
         echo "<p>Perimeter: $perim</p>";
+        echo "<br>";
+        echo "<div class='square'></div>";
     }
 
     function calculateRectangle() {
@@ -27,10 +33,14 @@
         $area = $w * $h;
         $perim = ($w * 2) + ($h * 2);
 
+        echo "<br>";
         echo "<p>Width: $w</p>";
         echo "<p>Height: $h</p>";
         echo "<p>Area: $area</p>";
         echo "<p>Perimeter: $perim</p>";
+        echo "<br>";
+
+        ($h > $w) ? print("<div class='rectangle tall'></div>") : print("<div class='rectangle'></div>");
     }
 
     switch($_POST["action"]) {

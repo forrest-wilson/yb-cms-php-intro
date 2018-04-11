@@ -1,17 +1,19 @@
 <?php
+    define("PI", 3.14);
+    
     function calculateCircle() {
         $rad = $_POST["radius"];
         $diam = 2 * $rad;
-        $area = 3.14 * $rad * $rad;
-        $circum = 2 * 3.14 * $rad;
+        $area = PI * $rad * $rad;
+        $circum = 2 * PI * $rad;
 
         echo "<br>";
-        echo "<p>Radius: $rad</p>";
-        echo "<p>Diameter: $diam</p>";
-        echo "<p>Area: $area</p>";
-        echo "<p>Circumference: $circum</p>";
+        echo "<p>Radius: $rad", "px</p>";
+        echo "<p>Diameter: $diam", "px</p>";
+        echo "<p>Area: $area", "px<sup>2</sup></p>";
+        echo "<p>Circumference: $circum", "px</p>";
         echo "<br>";
-        echo "<div class='circle'></div>";
+        echo "<div class='shape' style='border-radius: 50%; width: $diam", "px; height: $diam", "px;'></div>";
     }
 
     function calculateSquare() {
@@ -20,11 +22,11 @@
         $perim = $side * 4;
 
         echo "<br>";
-        echo "<p>Side Length: $side</p>";
-        echo "<p>Area: $area</p>";
-        echo "<p>Perimeter: $perim</p>";
+        echo "<p>Side Length: $side", "px</p>";
+        echo "<p>Area: $area", "px<sup>2</sup></p>";
+        echo "<p>Perimeter: $perim", "px</p>";
         echo "<br>";
-        echo "<div class='square'></div>";
+        echo "<div class='shape' style='width: $side", "px; height: $side", "px;'></div>";
     }
 
     function calculateRectangle() {
@@ -34,24 +36,24 @@
         $perim = ($w * 2) + ($h * 2);
 
         echo "<br>";
-        echo "<p>Width: $w</p>";
-        echo "<p>Height: $h</p>";
-        echo "<p>Area: $area</p>";
-        echo "<p>Perimeter: $perim</p>";
+        echo "<p>Width: $w", "px</p>";
+        echo "<p>Height: $h", "px</p>";
+        echo "<p>Area: $area", "px<sup>2</sup></p>";
+        echo "<p>Perimeter: $perim", "px</p>";
         echo "<br>";
 
-        echo ($h > $w) ? "<div class='rectangle tall'></div>" : "<div class='rectangle'></div>";
+        echo "<div class='shape' style='width: $w", "px; height: $h", "px;'></div>";
     }
 
     switch($_POST["action"]) {
         case "circle":
-        calculateCircle();
-        break;
+            calculateCircle();
+            break;
         case "square":
-        calculateSquare();
-        break;
+            calculateSquare();
+            break;
         case "rectangle":
-        calculateRectangle();
+            calculateRectangle();
         break;
     }
 ?>

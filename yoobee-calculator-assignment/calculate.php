@@ -40,7 +40,7 @@
         echo "<p>Perimeter: $perim</p>";
         echo "<br>";
 
-        ($h > $w) ? print("<div class='rectangle tall'></div>") : print("<div class='rectangle'></div>");
+        echo ($h > $w) ? "<div class='rectangle tall'></div>" : "<div class='rectangle'></div>";
     }
 
     switch($_POST["action"]) {

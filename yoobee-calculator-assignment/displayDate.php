@@ -1,9 +1,6 @@
 <?php
-
     $hour = date("G");
     $time = date("g:i a");
-    $leapYear = date("L");
-    $year = date("Y");
     $fullDate = date("l, jS F o-m-d");
 
     if ($hour >= 17) {
@@ -15,5 +12,4 @@
     }
 
     echo "<p>It's currently $time, $fullDate</p>";
-
 ?>

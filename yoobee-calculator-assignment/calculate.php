@@ -62,7 +62,7 @@
         echo "<p>The Area of a rectangle is calculated by multiplying the width by the height.</p>";
 
         echo "<h2>How the Perimeter is calculated:</h2>";
-        echo "<p>The Perimeter of a rectangle is calculated doubling the width and height, then adding them together.</p>";
+        echo "<p>The Perimeter of a rectangle is calculated by doubling the width and height, then adding them together.</p>";
 
         echo "<br>";
 

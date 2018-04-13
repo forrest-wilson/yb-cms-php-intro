@@ -25,7 +25,7 @@
 				</div>
 			</div>
 
-			<input type="submit" class="button is-success">
+			<input type="submit" class="button is-success" value="Submit">
 		</form>
 		<br>
 		<form class="column" action="remove.php" method="POST">
@@ -36,7 +36,7 @@
 				</div>
 			</div>
 
-			<input type="submit" class="button is-danger">
+			<input type="submit" class="button is-danger" value="Remove">
 		</form>
 	</div>
 

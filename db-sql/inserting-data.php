@@ -53,14 +53,14 @@
 				echo "connection failed:" . $e -> getMessage();
 			}
 
-			$sql="SELECT * FROM Items";
+			$sql="SELECT Items.ID, Items.Name, Items.Price, Stock.Date, Stock.Quantity FROM Items, Stock WHERE Items.ID = Stock.ID";
 			echo "<ul>";
 
 			try {
 				$rows = $conn -> query($sql);
 
 				foreach ($rows as $row) {
-					echo "<li>" . "ID: " . $row["ID"] . ", " . $row["Name"] . " costs $" . $row["Price"] . "</li>";
+					echo "<li>" . "ID: " . $row["ID"] . ", " . $row["Name"] . " costs $" . $row["Price"] . ", Stock Level: " . $row["Quantity"] . ". Date: " . $row["Date"] . "</li>";
 				}
 			} catch (PDOException $e) {
 				echo "Query failed: " . $e -> getMessage();

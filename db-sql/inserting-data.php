@@ -14,20 +14,34 @@
 			<div class="field">
 				<label class="label">Item Name</label>
 				<div class="control">
-					<input class="input" name="name" type="text" placeholder="Item Name">
+					<input class="input" name="name" type="text" placeholder="Item Name" required>
 				</div>
 			</div>
 
 			<div class="field">
 				<label class="label">Item Price</label>
 				<div class="control">
-					<input class="input" name="price" type="text" placeholder="Item Price">
+					<input class="input" name="price" type="text" placeholder="Item Price" required>
+				</div>
+			</div>
+			
+			<div class="field">
+				<label class="label">Stock</label>
+				<div class="control">
+					<input class="input" name="stock" type="text" placeholder="Stock Level" required>
+				</div>
+			</div>
+			
+			<div class="field">
+				<label class="label">Reorder Level</label>
+				<div class="control">
+					<input class="input" name="reorder" type="text" placeholder="Reorder Level" required>
 				</div>
 			</div>
 
 			<input type="submit" class="button is-success" value="Submit">
 		</form>
-		<br>
+
 		<form class="column" action="remove.php" method="POST">
 			<div class="field">
 				<label class="label">ID to Remove</label>
@@ -61,7 +75,12 @@
 
 				foreach ($rows as $row) {
 					echo "<li>" . "ID: " . $row["ID"] . ", " . $row["Name"] . " costs $" . $row["Price"] . ", Stock Level: " . $row["Quantity"] . ". Date: " . $row["Date"] . "</li>";
+					
+					if ($row["Price"] < 5) {
+					    echo $row["Name"] . " is on sale!";
+					}
 				}
+				
 			} catch (PDOException $e) {
 				echo "Query failed: " . $e -> getMessage();
 			}

@@ -12,10 +12,14 @@
 
     $name = $_POST["name"];
     $price = $_POST["price"];
+    $stock = $_POST["stock"];
+    $reorder = $_POST["reorder"];
 
     $sql = $conn -> prepare("INSERT INTO Items(Name, Price) VALUES(?, ?)");
+    $sql2 = $conn -> prepare("INSERT INTO Stock(Quantity, Reorder_Level) VALUES(?, ?)");
 
     $sql -> execute(array($name, $price));
+    $sql2 -> execute(array($stock, $reorder));
 
     $conn = null;
 

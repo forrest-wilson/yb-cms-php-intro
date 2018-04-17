@@ -13,8 +13,10 @@
     $id = $_POST["id"];
 
     $sql = $conn -> prepare("DELETE FROM Items WHERE ID = ?");
+    $sql2 = $conn -> prepare("DELETE FROM Stock WHERE ID = ?");
 
     $sql -> execute(array($id));
+    $sql2 -> execute(array($id));
 
     $conn = null;
 
